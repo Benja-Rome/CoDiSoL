@@ -1,0 +1,279 @@
+:root {
+    --brand-celeste: #2dc1c1;
+    --brand-celeste-hover: #24a1a1;
+    --brand-dark: #1b2e3b;
+    --brand-light: #f8f9fa;
+    --text-color: #333333;
+}
+
+body {
+    font-family: "Adwaita Sans", "Free Sans", system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+    background-color: var(--brand-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Personalizada */
+.custom-navbar {
+    background-color: var(--brand-celeste);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #ffffff !important;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    opacity: 0.85;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.logo-img {
+    height: 38px;
+    width: auto;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Hero Section */
+.hero-slide-1, .hero-slide-2 {
+    background: linear-gradient(135deg, var(--brand-celeste) 0%, var(--brand-dark) 100%);
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+}
+
+/* Botones con color institucional */
+.btn-primary-custom {
+    background-color: var(--brand-celeste);
+    border-color: var(--brand-celeste);
+    color: #ffffff;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--brand-celeste-hover);
+    border-color: var(--brand-celeste-hover);
+    color: #ffffff;
+}
+
+.btn-outline-primary-custom {
+    color: var(--brand-celeste);
+    border-color: var(--brand-celeste);
+}
+
+.btn-outline-primary-custom:hover {
+    background-color: var(--brand-celeste);
+    color: #ffffff;
+}
+
+.text-primary-custom {
+    color: var(--brand-celeste) !important;
+}
+
+.bg-celeste-light {
+    background-color: rgba(45, 193, 193, 0.15);
+}
+
+.bg-light-section {
+    background-color: #f1f5f8;
+}
+
+/* Grilla de Servicios (CSS Grid) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.icon-wrapper {
+    color: var(--brand-celeste);
+}
+
+/* Grilla de Productos (CSS Grid Mobile-First) */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+    background-color: #e2e8f0;
+}
+
+/* Footer Links */
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Botones de filtro del catálogo */
+.filter-buttons .btn {
+    transition: all 0.2s ease;
+}
+
+.filter-buttons .btn-outline-secondary {
+    color: #555555;
+    border-color: #cccccc;
+}
+
+.filter-buttons .btn-outline-secondary:hover {
+    background-color: #e9ecef;
+    color: #222222;
+}
+
+/* Grilla de Servicios Detallados */
+.services-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .services-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.service-icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(45, 193, 193, 0.15);
+    color: var(--brand-celeste);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.service-detail-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Grilla de Misión, Visión y Valores */
+.about-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .about-pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.pillar-icon {
+    color: var(--brand-celeste);
+}
+
+/* Grilla del Equipo de Trabajo (CSS Grid) */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.team-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--brand-celeste);
+    background-color: #e2e8f0;
+}
+
+.team-card {
+    transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Íconos de la página de Contacto */
+.contact-icon-box {
+    width: 42px;
+    height: 42px;
+    background-color: rgba(45, 193, 193, 0.15);
+    color: var(--brand-celeste);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

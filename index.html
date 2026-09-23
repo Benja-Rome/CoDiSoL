@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Básico -->
+    <title>CoDiSoL - Comunidad Digital de Software Libre</title>
+    <meta name="description" content="Comunidad dedicada a promover la cultura libre, la privacidad, la soberanía tecnológica y el software libre en nuestras comunidades.">
+    <meta name="keywords" content="software libre, open source, privacidad, linux, soberania tecnologica, codisol">
+    <meta name="author" content="CoDiSoL">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+
+    <!-- Open Graph (Redes Sociales) -->
+    <meta property="og:title" content="CoDiSoL - Comunidad Digital de Software Libre">
+    <meta property="og:description" content="Difundimos la cultura libre, privacidad y autonomía digital.">
+    <meta property="og:image" content=""> <!-- ahí va la url del github pages despues-->
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Estilos Propios (debe ir DESPUÉS de Bootstrap para sobreescribir) -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Deferred JS para no bloquear render -->
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="./img/logo-transparente.png" alt="Logo de CoDiSoL - Comunidad Digital de Software Libre" class="logo-img">
+                    <span class="brand-text fw-bold">CoDiSoL</span>
+                </a>
+
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-center py-2 py-lg-0 fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+            <!-- 1. Hero Section con Carrusel de Bootstrap -->
+            <section class="hero-section text-white">
+                <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active hero-slide-1 py-5">
+                            <div class="container text-center text-lg-start py-5">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-8">
+                                        <span class="badge bg-light text-dark mb-2 px-3 py-2 fw-semibold">Comunidad Digital</span>
+                                        <h1 class="display-4 fw-bold">Impulsamos la soberanía tecnológica</h1>
+                                        <p class="lead mb-4">Promovemos el uso y desarrollo de software libre, la privacidad y la cultura abierta en nuestras comunidades locales.</p>
+                                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                                            <a href="nosotros.html" class="btn btn-light btn-lg text-primary-custom fw-bold px-4">Conócenos</a>
+                                            <a href="servicios.html" class="btn btn-outline-light btn-lg px-4">Servicios</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item hero-slide-2 py-5">
+                            <div class="container text-center text-lg-start py-5">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-8">
+                                        <span class="badge bg-light text-dark mb-2 px-3 py-2 fw-semibold">Cultura Libre</span>
+                                        <h1 class="display-4 fw-bold">Privacidad y Autonomía Digital</h1>
+                                        <p class="lead mb-4">Brindamos talleres, consultorías y herramientas éticas para personas, colectivos y emprendimientos.</p>
+                                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                                            <a href="tienda.html" class="btn btn-light btn-lg text-primary-custom fw-bold px-4">Ir a la Tienda</a>
+                                            <a href="contacto.html" class="btn btn-outline-light btn-lg px-4">Sumate</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 2. Introducción a Servicios (Flexbox / Grid) -->
+            <section class="py-5 bg-white">
+                <div class="container py-4">
+                    <header class="text-center mb-5">
+                        <h2 class="h1 fw-bold text-dark">Servicios y Capacitaciones</h2>
+                        <p class="text-muted fs-5">Acompañamos a comunidades y organizaciones en la transición hacia tecnologías libres.</p>
+                    </header>
+
+                    <div class="services-grid">
+                        <article class="service-card">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                                    <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.126a1 1 0 0 0 .157.045q.038.007.073.007c.035 0 .06-.002.073-.007a1 1 0 0 0 .157-.045q.113-.041.293-.126c.241-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.523zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.5 1.5 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.7 11.7 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.7 11.7 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.5 1.5 0 0 1 2.185 1.43C2.843 1.215 3.962.86 5.072.56"/>
+                                    <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                                </svg>
+                            </div>
+                            <h3 class="h4 fw-semibold mt-3">Seguridad y Privacidad</h3>
+                            <p class="text-secondary">Asesoramiento para proteger tus datos y comunicaciones con soluciones open source encriptadas.</p>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cpu" viewBox="0 0 16 16">
+                                    <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h.5A1.5 1.5 0 0 1 14 3.5V4h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v.5a1.5 1.5 0 0 1-1.5 1.5H12v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-.5A1.5 1.5 0 0 1 2 12.5V12H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2V4H.5a.5.5 0 0 1 0-1H2v-.5A1.5 1.5 0 0 1 3.5 2H4V.5a.5.5 0 0 1 .5-.5M3 3.5a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V4a.5.5 0 0 0-.5-.5z"/>
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </div>
+                            <h3 class="h4 fw-semibold mt-3">Migración a Linux</h3>
+                            <p class="text-secondary">Migramos tus equipos y servidores a distribuciones libres adaptadas a tus necesidades sin licenciamiento costoso.</p>
+                        </article>
+
+                        <article class="service-card">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4 0 1 1 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 12.996c.001.077.018.232.072.417H1.18c.008-.12.062-.43.232-.767C1.727 12.08 2.378 11.5 3.5 11.5c.57 0 1.02.146 1.42.5M4 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0-1a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+                                </svg>
+                            </div>
+                            <h3 class="h4 fw-semibold mt-3">Talleres Comunitarios</h3>
+                            <p class="text-secondary">Espacios de formación práctica para escuelas, vecinales y organizaciones sociales sobre cultura libre.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Destacados del E-commerce (Grilla CSS Grid + Modals) -->
+            <section class="py-5 bg-light-section">
+                <div class="container py-4">
+                    <header class="d-flex justify-content-between align-items-end mb-4">
+                        <div>
+                            <h2 class="h1 fw-bold text-dark mb-1">Destacados de la Tienda</h2>
+                            <p class="text-muted m-0">Merchandising y kits para apoyar la sustentabilidad de CoDiSoL.</p>
+                        </div>
+                        <a href="tienda.html" class="btn btn-outline-primary-custom d-none d-md-inline-block">Ver catálogo completo →</a>
+                    </header>
+
+                    <div class="products-grid">
+                        <!-- Producto 1 -->
+                        <article class="card h-100 product-card shadow-sm border-0">
+                            <img src="./img/producto-pendrive.jpg" class="card-img-top" alt="Pendrive Booteable con Linux Live de CoDiSoL">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge bg-celeste-light text-primary-custom mb-2 align-self-start">Software</span>
+                                <h3 class="card-title h5 fw-bold">Pendrive Live OS 64GB</h3>
+                                <p class="card-text text-muted flex-grow-1">Pendrive multi-boot preparado con Debian, Fedora y herramientas de rescate.</p>
+                                <div class="d-flex align-items-center justify-content-between mt-3">
+                                    <span class="fs-5 fw-bold text-dark">$15.000</span>
+                                    <button class="btn btn-primary-custom btn-sm" data-bs-toggle="modal" data-bs-target="#productModal1">Ver Detalle</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Producto 2 -->
+                        <article class="card h-100 product-card shadow-sm border-0">
+                            <img src="./img/producto-remera.jpg" class="card-img-top" alt="Remera CoDiSoL 100% Algodón">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge bg-celeste-light text-primary-custom mb-2 align-self-start">Ropa</span>
+                                <h3 class="card-title h5 fw-bold">Remera CoDiSoL "Free Code"</h3>
+                                <p class="card-text text-muted flex-grow-1">100% Algodón peinado. Serigrafía artesanal con el estampado del proyecto.</p>
+                                <div class="d-flex align-items-center justify-content-between mt-3">
+                                    <span class="fs-5 fw-bold text-dark">$18.500</span>
+                                    <button class="btn btn-primary-custom btn-sm" data-bs-toggle="modal" data-bs-target="#productModal1">Ver Detalle</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Producto 3 -->
+                        <article class="card h-100 product-card shadow-sm border-0">
+                            <img src="./img/producto-guia.jpg" class="card-img-top" alt="Guía Impresa de Autodefensa Digital">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge bg-celeste-light text-primary-custom mb-2 align-self-start">Publicaciones</span>
+                                <h3 class="card-title h5 fw-bold">Guía de Autodefensa Digital</h3>
+                                <p class="card-text text-muted flex-grow-1">Manual físico paso a paso para proteger tu privacidad e identidad en internet.</p>
+                                <div class="d-flex align-items-center justify-content-between mt-3">
+                                    <span class="fs-5 fw-bold text-dark">$8.000</span>
+                                    <button class="btn btn-primary-custom btn-sm" data-bs-toggle="modal" data-bs-target="#productModal1">Ver Detalle</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="text-center mt-4 d-md-none">
+                        <a href="tienda.html" class="btn btn-outline-primary-custom w-100">Ver catálogo completo →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal de Producto (Bootstrap Component 2) -->
+            <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0">
+                        <div class="modal-header border-0 pb-0">
+                            <h1 class="modal-title fs-5 fw-bold" id="productModal1Label">Detalle del Producto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-muted">Todos nuestros insumos son producidos colaborativamente para financiar talleres gratuitos en la comunidad.</p>
+                            <ul class="text-secondary small">
+                                <li>Formatos y licencias 100% abiertas.</li>
+                                <li>Soporte técnico directo de la comunidad CoDiSoL.</li>
+                                <li>Envíos locales o retiro en puntos comunitarios.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+                            <a href="contacto.html" class="btn btn-primary-custom btn-sm">Consultar / Encargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Semántico -->
+        <footer class="bg-dark text-white py-5 mt-auto">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <img src="./img/logo-transparente.png" alt="Logo de CoDiSoL" class="logo-img">
+                            <span class="fs-4 fw-bold">CoDiSoL</span>
+                        </div>
+                        <p class="text-secondary small">Comunidad Digital de Software Libre. Fomentando el conocimiento abierto, la privacidad y los derechos digitales en la comunidad local.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="h6 fw-bold text-uppercase mb-3">Navegación</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="tienda.html">Tienda</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="nosotros.html">Nosotros</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <h4 class="h6 fw-bold text-uppercase mb-3">Licencia & Código</h4>
+                        <p class="text-secondary small">Este sitio web está construido con código abierto. Sentite libre de clonarlo, aprender y colaborar en GitHub.</p>
+                        <div>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none small d-inline-flex align-items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                                </svg>
+                                Repositorio en GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4 border-secondary opacity-25">
+                <div class="text-center text-secondary small">
+                    &copy; CoDiSoL - Comunidad Digital de Software Libre. Copyleft / CC BY-SA 4.0.
+                </div>
+            </div>
+        </footer>
+
+    <!-- Bootstrap JS (necesario para el menú hamburguesa móvil) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
