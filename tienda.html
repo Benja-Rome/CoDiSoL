@@ -76,15 +76,40 @@
         <section class="py-5 bg-light-section">
             <div class="container">
 
-                <!-- Barra de Filtros por Categoría -->
-                <nav aria-label="Filtros de catálogo" class="mb-4">
-                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start filter-buttons">
-                        <button type="button" class="btn btn-sm btn-primary-custom filter-btn active" data-filter="all">Todos</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary filter-btn" data-filter="software">Software / Hardware</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary filter-btn" data-filter="ropa">Ropa</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary filter-btn" data-filter="publicaciones">Publicaciones</button>
+                <!-- Barra de Control: Filtros (Izquierda) + Buscador (Derecha) -->
+                <div class="row align-items-center g-3 mb-4">
+
+                    <!-- Filtros por Categoría (Extremo Izquierdo) -->
+                    <div class="col-12 col-md-auto">
+                        <nav aria-label="Filtros de catálogo">
+                            <div class="d-flex flex-wrap gap-2 filter-buttons">
+                                <button type="button" class="btn btn-sm btn-primary-custom filter-btn active" data-filter="all">Todos</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary filter-btn" data-filter="software">Software / Hardware</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary filter-btn" data-filter="ropa">Ropa</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary filter-btn" data-filter="publicaciones">Publicaciones</button>
+                            </div>
+                        </nav>
                     </div>
-                </nav>
+
+                    <!-- Buscador de Productos (Extremo Derecho) -->
+                    <div class="col-12 col-md-auto ms-md-auto">
+                        <div class="input-group shadow-sm" style="min-width: 280px; max-width: 340px;">
+                            <span class="input-group-text bg-white border-end-0 text-muted ps-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg>
+                            </span>
+                            <input type="text" id="storeSearchInput" class="form-control border-start-0 py-2 ps-2" placeholder="Buscar producto..." aria-label="Buscar productos en la tienda">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Mensaje cuando no hay resultados -->
+                <div id="noResultsMessage" class="text-center py-5 d-none">
+                    <p class="text-muted fs-5 mb-1">No se encontraron productos que coincidan con tu búsqueda.</p>
+                    <small class="text-secondary">Proba buscando con otros términos como "mousepad", "remera" o seleccionando "Todos".</small>
+                </div>
 
                 <!-- Grilla de Productos (CSS Grid) -->
                 <div class="products-grid" id="catalog-grid">
@@ -184,7 +209,7 @@
                         </div>
                     </article>
 
-                    <!-- Producto 6: Mousepad Terminal (Software / Hardware) -->
+                    <!-- Producto 6: Software/Hardware -->
                     <article class="card product-card shadow-sm border-0" data-category="software">
                         <img src="./img/producto-mousepad.jpg" class="card-img-top" alt="Mousepad con comandos de terminal Bash y Linux">
                         <div class="card-body d-flex flex-column">
